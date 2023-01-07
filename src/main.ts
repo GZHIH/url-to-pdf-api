@@ -1,6 +1,8 @@
 import '@/assets/style/font.css';
 import '@/assets/style/index.css';
 
+import '@/script/utils/toPdf';
+
 import { createApp } from 'vue';
 import App from './App.vue';
 

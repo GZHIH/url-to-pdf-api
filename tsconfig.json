@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ES6",
+        "module": "ESNext",
+        "useDefineForClassFields": true, // 编译class时采用 Object.defineProperty，避免意外的调用父类原型中的同名方法
+        "moduleResolution": "Node",
+        "allowJs": true, // 允许vue中使用js脚本导出
+        "strict": true,
+        "jsx": "preserve", // 将jsx选项设置为“preserve”意味着 TypeScript 不应处理JSX。 这样做使 Babel 可以控制所有 JSX 和 TypeScript 坚持使用类型，因为它尚不支持 Vue JSX。
+        "resolveJsonModule": true, // 在 TypeScript 模块中导入 JSON 模块
+        "isolatedModules": false, // 将每个文件做为单独的模块
+        "esModuleInterop": true, // 开启 import * as module from "module"
+        "lib": ["ESNext", "DOM"], // TS需要引用的库，即声明文件，es5 默认引用dom、es5、scripthost,如需要使用es的高级版本特性，通常都需要配置，如es8的数组新特性需要引入"ES2019.Array"
+        "skipLibCheck": true, // 跳过lib检查
+        "noEmit": true, // 不输出文件,即编译后不会生成任何js文件
+        "noImplicitThis": false, // 当“this”的类型为“any”时，启用错误报告。
+        "baseUrl": "",
+        "paths": {
+            "@/*": ["src/*"],
+            "@index/*": ["src/pages/index/*"],
+            "@page2/*": ["src/pages/page2/*"],
+        }
+    },
+    "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "env/*"],
+    "references": [{ "path": "./tsconfig.node.json" }]
+}

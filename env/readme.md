@@ -1,0 +1,3 @@
+-   以 VITE\_ 开头才会加入到 import.meta.env 中
+-   vite 配置的环境变量，在项目中可以使用 import.meta.env.KEY 来访问对应的 KEY 环境变量;
+-   通过启动脚本的 --mode=MODE 属性来确定使用哪种环境变量，自定义时增加对应的 env/.env.MODE 文件即可。

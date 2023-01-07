@@ -11,7 +11,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                index: resolve(__dirname, 'html/index.html'),
+                index: resolve(__dirname, 'index.html'),
             },
             output: {
                 chunkFileNames: 'static/script/chunk-[name]-[hash].js',
@@ -28,7 +28,6 @@ export default defineConfig({
         // 设置别名时，需要在 tsconfig.json 中也设置对应 paths，不然会报 找不到模块“别名/...”或其相应的类型声明。
         alias: [
             { find: '@', replacement: '/src' },
-            { find: '@index', replacement: '/src/pages/index' },
         ],
     },
 });

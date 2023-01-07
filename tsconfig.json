@@ -17,8 +17,6 @@
         "baseUrl": "",
         "paths": {
             "@/*": ["src/*"],
-            "@index/*": ["src/pages/index/*"],
-            "@page2/*": ["src/pages/page2/*"],
         }
     },
     "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "env/*"],
